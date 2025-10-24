@@ -88,11 +88,12 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #player {
-    background-image: url(/Assets/Heart.png);
+    background-image: url(https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Heart.png);
     background-size: cover;
 }
 
 #enemy {
-    background-image: url(/Assets/Annoying.webp);
+    background-image: url(https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Annoying.webp);
     background-size: cover;
 }
+
