@@ -12,7 +12,7 @@ const repMusic = document.getElementById('rep-music');
 const vida = document.getElementById('vida');
 const sfx = document.getElementById('sfx')
 
-sfx.src = '/Assets/Daño.wav'
+sfx.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Daño.wav'
 
 let playerPos = { x: 100, y: 100 };
 let vidaPlayer = 10;
@@ -97,11 +97,11 @@ function checkCollision() {
         if(vidaPlayer == 0){
             repMusic.pause();
             valSpdEn.textContent = enemySpd;
-            sfx.src = "/Assets/Determination.wav"
+            sfx.src = "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Determination.wav"
             sfx.play();
             sfx.loop = true;
             alert("Don't lose hope..., Stay determined...");
-            btnImg.src = 'Assets/playBtn.jpg';
+            btnImg.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/playBtn.jpg';
             vidaPlayer = 10;
             gameRunning = false;
             
@@ -132,11 +132,11 @@ btnPlay.addEventListener('click', (e) => {
     vida.textContent = vidaPlayer;
     if (!gameRunning) {
         gameRunning = true;
-        btnImg.src = 'Assets/btnPlay2.jpg';
+        btnImg.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/btnPlay2.jpg';
         requestAnimationFrame(loop);
         sfx.loop = false;
         sfx.pause();
-        sfx.src = '/Assets/Daño.wav';
+        sfx.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Daño.wav';
         const selectedSong = music.value || music.options[0].value;
         repMusic.src = selectedSong;
         repMusic.currentTime = 0;
@@ -144,21 +144,21 @@ btnPlay.addEventListener('click', (e) => {
         repMusic.play();
     } else {
         gameRunning = false;
-        btnImg.src = '/Assets/playBtn.png';
+        btnImg.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/playBtn.png';
         repMusic.pause();
     }
 });
 
 const enemyImg = {
-    "/Assets/Dogsong.wav": "/Assets/Annoying.webp",
-    "/Assets/Song That Might Play When You Fight Sans.wav": "/Assets/sans.png",
-    "/Assets/Temmie Village.wav": "/Assets/Temmie.webp"
+    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Dogsong.wav": "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Annoying.webp",
+    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Song That Might Play When You Fight Sans.wav": "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/sans.png",
+    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Temmie Village.wav": "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Temmie.webp"
 };
 
 const enemySelSpd = {
-    "/Assets/Dogsong.wav": 2,
-    "/Assets/Temmie Village.wav": 5,
-    "/Assets/Song That Might Play When You Fight Sans.wav": 8
+    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Dogsong.wav": 2,
+    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Temmie Village.wav": 5,
+    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Song That Might Play When You Fight Sans.wav": 8
 }
 
 music.addEventListener('change', () => {
@@ -186,4 +186,5 @@ music.addEventListener('change', () => {
         slidEnemy.value = enemySpd; 
     }
     music.blur();
+
 });
