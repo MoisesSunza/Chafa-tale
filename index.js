@@ -169,7 +169,7 @@ music.addEventListener('change', () => {
         repMusic.loop = true;
         repMusic.play();
         if (enemyImg[cancionSel]) {
-            enemy.style.backgroundImage = `url(https://moisessunza.github.io/Chafa-tale/Assets/${enemyImg[cancionSel]})`;
+            enemy.style.backgroundImage = `url(${enemyImg[cancionSel]})`;
         }
         if(enemySelSpd[cancionSel]){
             enemySpd = parseInt(enemySelSpd[cancionSel]);
@@ -180,7 +180,7 @@ music.addEventListener('change', () => {
         repMusic.pause();
         repMusic.src = '';
         repMusic.loop = false;
-        enemy.src = `url(https://moisessunza.github.io/Chafa-tale/Assets/${enemyImg[cancionSel]})`;
+        enemy.src = `url(${enemyImg[cancionSel]})`;
         enemySpd = parseInt(enemySelSpd[cancionSel]);
         valSpdEn.textContent = enemySpd;
         slidEnemy.value = enemySpd; 
@@ -188,3 +188,4 @@ music.addEventListener('change', () => {
     music.blur();
 
 });
+
