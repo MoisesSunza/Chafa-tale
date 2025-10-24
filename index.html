@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Chafa-tale</title>
+</head>
+<body>
+    <h1>Chafa-tale</h1>
+    
+    <div id="area-juego">
+        <div id="player" class="character"></div>
+        <div id="enemy" class="character"></div>
+    </div>
+
+    
+    <div class="ajustes">
+        <h2>Opciones</h2>
+        <form>
+            <button id="btn-play">
+                <img id="btn-img" src="/Assets/playBtn.png" alt="">
+            </button>
+
+            <span>Velocidad del Jugador:</span>
+            <span id="valSpdPlay">5</span>
+            <input type="range" id="playerSpd" min="0" max="10" value="5" step="1">
+            
+            <span>Velocidad del Enemigo:</span>
+            <span id="valSpdEn">2</span>
+            <input type="range" id="enemySpd" min="0" max="10" value="2" step="1">
+
+            <span>Enemigo:</span>
+            <select name="musica" id="music">
+                <option value="/Assets/Dogsong.wav" selected>Annoying Dog</option>
+                <option value="/Assets/Temmie Village.wav">Temmie</option>
+                <option value="/Assets/Song That Might Play When You Fight Sans.wav">sans.</option>
+            </select>
+
+            <br>
+            <span>Vidas: </span>
+            <span id="vida">10</span>
+            
+            <audio id="rep-music"></audio>
+            <audio id="sfx"></audio>
+
+        </form>
+    </div>
+    
+    <script src="/index.js"></script>
+</body>
+</html>
