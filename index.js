@@ -12,7 +12,7 @@ const repMusic = document.getElementById('rep-music');
 const vida = document.getElementById('vida');
 const sfx = document.getElementById('sfx')
 
-sfx.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Daño.wav'
+sfx.src = 'https://moisessunza.github.io/Chafa-tale/Assets/Daño.wav'
 
 let playerPos = { x: 100, y: 100 };
 let vidaPlayer = 10;
@@ -97,11 +97,11 @@ function checkCollision() {
         if(vidaPlayer == 0){
             repMusic.pause();
             valSpdEn.textContent = enemySpd;
-            sfx.src = "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Determination.wav"
+            sfx.src = "https://moisessunza.github.io/Chafa-tale/Assets/Determination.wav"
             sfx.play();
             sfx.loop = true;
             alert("Don't lose hope..., Stay determined...");
-            btnImg.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/playBtn.jpg';
+            btnImg.src = 'https://moisessunza.github.io/Chafa-tale/Assets/playBtn.jpg';
             vidaPlayer = 10;
             gameRunning = false;
             
@@ -132,11 +132,11 @@ btnPlay.addEventListener('click', (e) => {
     vida.textContent = vidaPlayer;
     if (!gameRunning) {
         gameRunning = true;
-        btnImg.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/btnPlay2.jpg';
+        btnImg.src = 'https://moisessunza.github.io/Chafa-tale/Assets/btnPlay2.jpg';
         requestAnimationFrame(loop);
         sfx.loop = false;
         sfx.pause();
-        sfx.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Daño.wav';
+        sfx.src = 'https://moisessunza.github.io/Chafa-tale/Assets/Daño.wav';
         const selectedSong = music.value || music.options[0].value;
         repMusic.src = selectedSong;
         repMusic.currentTime = 0;
@@ -144,21 +144,21 @@ btnPlay.addEventListener('click', (e) => {
         repMusic.play();
     } else {
         gameRunning = false;
-        btnImg.src = 'https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/playBtn.png';
+        btnImg.src = 'https://moisessunza.github.io/Chafa-tale/Assets/playBtn.png';
         repMusic.pause();
     }
 });
 
 const enemyImg = {
-    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Dogsong.wav": "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Annoying.webp",
-    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Song That Might Play When You Fight Sans.wav": "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/sans.png",
-    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Temmie Village.wav": "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Temmie.webp"
+    "https://moisessunza.github.io/Chafa-tale/Assets/Dogsong.wav": "https://moisessunza.github.io/Chafa-tale/Assets/Annoying.webp",
+    "https://moisessunza.github.io/Chafa-tale/Assets/Song That Might Play When You Fight Sans.wav": "https://moisessunza.github.io/Chafa-tale/Assets/sans.png",
+    "https://moisessunza.github.io/Chafa-tale/Assets/Temmie Village.wav": "https://moisessunza.github.io/Chafa-tale/Assets/Temmie.webp"
 };
 
 const enemySelSpd = {
-    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Dogsong.wav": 2,
-    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Temmie Village.wav": 5,
-    "https://github.com/MoisesSunza/Chafa-tale/tree/main/Assets/Song That Might Play When You Fight Sans.wav": 8
+    "https://moisessunza.github.io/Chafa-tale/Assets/Dogsong.wav": 2,
+    "https://moisessunza.github.io/Chafa-tale/Assets/Temmie Village.wav": 5,
+    "https://moisessunza.github.io/Chafa-tale/Assets/Song That Might Play When You Fight Sans.wav": 8
 }
 
 music.addEventListener('change', () => {
@@ -169,7 +169,7 @@ music.addEventListener('change', () => {
         repMusic.loop = true;
         repMusic.play();
         if (enemyImg[cancionSel]) {
-            enemy.style.backgroundImage = `url(${enemyImg[cancionSel]})`;
+            enemy.style.backgroundImage = `url(https://moisessunza.github.io/Chafa-tale/Assets/${enemyImg[cancionSel]})`;
         }
         if(enemySelSpd[cancionSel]){
             enemySpd = parseInt(enemySelSpd[cancionSel]);
@@ -180,7 +180,7 @@ music.addEventListener('change', () => {
         repMusic.pause();
         repMusic.src = '';
         repMusic.loop = false;
-        enemy.src = `url(${enemyImg[cancionSel]})`;
+        enemy.src = `url(https://moisessunza.github.io/Chafa-tale/Assets/${enemyImg[cancionSel]})`;
         enemySpd = parseInt(enemySelSpd[cancionSel]);
         valSpdEn.textContent = enemySpd;
         slidEnemy.value = enemySpd; 
